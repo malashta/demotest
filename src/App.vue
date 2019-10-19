@@ -1,28 +1,68 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header class="">
+      <search-bar :placeholderTxt="'Enter an activity..'" />
+    </header>
+    <section class="container">
+      <todo-list />
+      <pagination />
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { SearchBar, Pagination, TodoList } from './components';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
-}
+    SearchBar,
+    Pagination,
+    TodoList
+  },
+	data() {
+  	return {
+  		todoInputStr: ''
+		}
+	}
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  // @import "~reset-css/reset.css";
+
+  body {
+    background: #edf0f1;
+    padding: 80px 0 0 0;
+  }
+
+  body, input, button {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .noFill {
+    fill: none;
+  }
+
+  header {
+    width: 100%;
+    height: 80px;
+
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    background: #25b99a;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+	.container {
+		width: 100%;
+		float: left;
+		padding: 15px;
+	}
 </style>
