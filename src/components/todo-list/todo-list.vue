@@ -1,6 +1,10 @@
 <template>
   <div class="todo-list">
-    <pre v-text="$attrs"></pre>
+    <ul class="todo">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
   </div>
 </template>
 
@@ -9,3 +13,7 @@ export default {
   props: {}
 };
 </script>
+
+<style lang="scss">
+	@import "todo-list";
+</style>

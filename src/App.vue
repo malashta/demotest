@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "~reset-css/reset.css";
+  // @import "~reset-css/reset.css";
 
   body {
     background: #edf0f1;
@@ -60,38 +60,9 @@ export default {
     border-bottom-left-radius: 10px;
   }
 
-  header button {
-    width: 50px;
-    height: 50px;
-
-    position:absolute;
-    top:15px;
-    right:15px;
-    z-index:2;
-
-    border-radius: 25px;
-    background: #fff;
-    border: 0px;
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
-  header button svg {
-    width: 16px;
-    height: 16px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: -8px 0 0 -8px;
-  }
-
-  header button svg .fill {
-    fill: #25b99a;
-  }
+	.container {
+		width: 100%;
+		float: left;
+		padding: 15px;
+	}
 </style>
